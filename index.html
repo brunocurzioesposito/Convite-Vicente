@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite - 1º Aniversário do Vicente</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #87CEEB, #fff);
+      text-align: center;
+      padding: 30px;
+    }
+    .convite {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      max-width: 550px;
+      margin: auto;
+      border: 3px solid #000;
+      position: relative;
+    }
+    h1 {
+      color: #000;
+      font-size: 28px;
+    }
+    h2 {
+      color: #e60000;
+      font-size: 24px;
+    }
+    .detalhes {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    .botao-maps, .botao-whats {
+      display: inline-block;
+      background: #1E90FF; /* azul mais forte para contraste */
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 10px 0;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .botao-maps:hover, .botao-whats:hover {
+      background: #104E8B;
+    }
+    .confirmacao {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    label {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="convite">
+    <h1>🎉 Venha comemorar o 1º Aniversário do Vicente</h1>
+
+    <p class="detalhes">Será realizado na <b>Casa de Festas Kidmais</b></p>
+    <p class="detalhes">📍 Endereço: R. José Higino, 115 - loja 1345<br>
+    Tijuca - Rio de Janeiro - RJ<br>
+    CEP: 20520-200</p>
+
+    <a class="botao-maps" href="https://www.google.com/maps/place/R.+Jos%C3%A9+Higino,+115+-+Loja+1345+-+Tijuca,+Rio+de+Janeiro+-+RJ,+20520-200" target="_blank">
+      📌 Abrir no Google Maps
+    </a>
+
+    <p style="margin-top: 20px; font-weight: bold;">✨ Contamos com sua presença! ✨</p>
+    <p>Por favor confirme no botão abaixo 👇</p>
+
+    <div class="confirmacao">
+      <label>
+        <input type="checkbox" id="presenca"> Confirmo minha presença
+      </label>
+      <br>
+      <button class="botao-whats" onclick="confirmar()">📲 Enviar Confirmação</button>
+    </div>
+  </div>
+
+  <script>
+    function confirmar() {
+      const check = document.getElementById("presenca");
+      if (check.checked) {
+        const mensagem = "Olá! Confirmo minha presença no 1º Aniversário do Vicente 🎉";
+        window.open("https://wa.me/5521980691096?text=" + encodeURIComponent(mensagem), "_blank");
+      } else {
+        alert("Por favor, marque a caixinha para confirmar sua presença 😊");
+      }
+    }
+  </script>
+</body>
+</html>
